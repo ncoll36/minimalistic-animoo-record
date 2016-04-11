@@ -1,0 +1,357 @@
+/*****************************
+Font Family
+*****************************/
+@font-face {
+
+}
+/*****************************
+ Body
+*****************************/
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 940px;
+    margin: 0px auto;
+    padding: 20px;
+}
+/*****************************
+ Input Styling
+*****************************/
+form {
+    margin: 0;
+}
+input {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 6px 12px;
+    margin: 5px 0px;
+    border: 1px solid #cccccc;
+    color: #555555;
+    font-size: 16px;
+    height: 40px; 
+}
+input[type="text"]:focus {
+    box-shadow: 0 0 3px #584e73;
+    padding: 8px;
+}
+input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    vertical-align: bottom;
+}
+input[type="submit"] {
+    color: #ffffff;
+    background: #584e73;
+    border: 1px solid #695f82;
+    font-size: 20px;
+    width: 40px;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: #322a46;
+}
+/*****************************
+ Header
+*****************************/
+
+/*****************************
+ Content
+*****************************/
+/*LIST*/
+.animelistcontainer {
+    display: table;
+    width: 100%;
+    margin-top: 20px;
+}
+/*Heading*/
+.animelistcontainer > .row-heading {
+    display: table-header-group;
+    font-weight: bold;
+    font-size: 20px;
+    background: #584e73!important;
+    color: #ffffff;
+}
+.animelistcontainer > .row-heading > div {
+    border-bottom: none!important;
+    cursor: default;
+}
+.animelistcontainer > .row-heading > .name {
+    padding: 14px 12px!important;
+}
+.animelistcontainer > .row-heading > .number {
+    font-family: FontAwesome;
+    content: "\f292";
+}
+/*Fields*/
+.animelistcontainer .row {
+    display: table-row;
+    background: #322a46;
+    color: #ffffff;
+}
+.animelistcontainer .row > div {
+    display: table-cell;
+    padding: 8px 0;
+    text-align: center;
+    border-bottom: 1px solid #403756;
+}
+.animelistcontainer > .animelist {
+    display: table-row-group;
+}
+.animelistcontainer .row > .name {
+    text-align: left;
+    padding: 8px 12px;
+}
+.animelistcontainer .row > .number {
+    width: 50px;
+    padding: 0 20px 0 0;
+}
+.animelistcontainer .row > .name > .no-folder {
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #5C5273;
+}
+.animelistcontainer .row > .add,
+.animelistcontainer .row > .minus,
+.animelistcontainer .row > .delete {
+    font-family: FontAwesome;
+    cursor: pointer;
+    width: 30px;
+    background: #70658d;
+    color: #ffffff;
+    border-bottom: 1px solid #7d729a;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+/*Modifiers*/
+.animelistcontainer .row > .add:before {
+    content: "\f067";
+}
+.animelistcontainer .row > .minus:before {
+    content: "\f068";
+}
+.animelistcontainer .row > .delete:before {
+    content: "\f00d";
+}
+/*TOOLS*/
+.tools {
+    margin: 20px 0;
+    height: 100px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.tools > .left {
+    /*background: #ccc;*/
+    width: calc(100% - 150px);
+    float: left;
+}
+.tools > .right {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    width: 108px;
+    height: 88px;
+    margin: 5px 0 5px 30px;
+    float: left;
+    padding: 0 10px 0 0;
+    color: #322a46;
+}
+/*TOOLS Left*/
+/*New Anime*/
+.add-anime {
+
+}
+.add-anime input[type="text"][name="name"] {
+    width: calc(100% - 157px);
+}
+.add-anime input[type="text"][name="number"] {
+    width: 60px;
+    text-align: center;
+}
+.add-anime input[type="checkbox"] {
+    display:none;
+}
+.add-anime input[type="checkbox"] + label {
+    width: 40px;
+    height: 40px;
+}
+.add-anime input[type="checkbox"] + label span {
+    display:inline-block;
+    width: 38px;
+    height: 38px;
+    vertical-align: middle;
+    background: url(../images/check-folder-un.png);
+    cursor: pointer;
+    margin: -2px 0 0 0;
+    border: solid 1px #ccc;
+}
+.add-anime input[type="checkbox"]:checked + label span {
+    background: url(../images/check-folder-sel.png);
+}
+/*Search*/
+.search {
+
+}
+.search input[type="text"] {
+    width: calc(100% - 46px);
+}
+.search input[type="checkbox"] {
+    display:none;
+}
+.search input[type="checkbox"] + label {
+    width: 40px;
+    height: 40px;
+}
+.search input[type="checkbox"] + label span {
+    display:inline-block;
+    width: 38px;
+    height: 38px;
+    vertical-align: middle;
+    background: url(../images/check-num-un.png);
+    cursor: pointer;
+    margin: -2px 0 0 0;
+    border: solid 1px #ccc;
+}
+.search input[type="checkbox"]:checked + label span {
+    background: url(../images/check-num-sel.png);
+}
+/*TOOLS Right/
+/*Count*/
+.count-title {
+    height: 21px;
+    float: left;
+    padding: 12px 0 0 8px;
+    display: inline-block;
+    font-size: 20px!important;
+}
+.count {
+    height: 37px;
+    float: right;
+    font-size: 30px;
+    padding: 4px 0;
+    display: inline-block;
+}
+/*Order*/
+.order {
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    height: 37px;
+    float: right;
+    font-size: 26px;
+    padding: 8px 0 0 0;
+}
+.order [type="checkbox"] {
+    border: 0; 
+    overflow: hidden; 
+    padding: 0; 
+    position: absolute; 
+    width: 0;
+}
+.order label {
+    cursor: pointer;
+}
+.order label:hover [type="checkbox"] + i:before {
+    color: #8f85ab;
+}
+.order label[for="order-alpha"] {
+    float: left;
+    margin: 0 12px 0 0;
+}
+.order [type="checkbox"] + i:before {
+    display: inline-block;
+    font-family: FontAwesome;
+}
+.order [type="checkbox"]:indeterminate + i {
+    color: #cccccc;
+}
+/*NOTIFICATIONS*/
+.notifications {
+    position: fixed;
+    color: #ffffff;
+    background: #66af66;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid #ffffff;
+    display: none;
+}
+/*LOGIN*/
+.login {
+    margin: auto;
+    background: #70658d;
+    width: 40%;
+    text-align: center;
+    padding: 25px 30px;
+    margin-top: 15%;
+}
+.login input {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+.login input[type="submit"] {
+    background: #322a46;
+}
+.login input[type="submit"]:hover {
+    background: #4D4369;
+}
+/*****************************
+ Mobile
+*****************************/
+@media (max-width: 980px) {
+    .wrapper {
+        width: calc(100% - 40px);
+    }
+}
+@media (max-width: 470px) {
+    .tools {
+        height: 170px;
+    }
+    .tools > .left {
+        width: 100%;
+        float: left;
+    }
+    .tools > .right {
+        width: 100%;
+        height: 50px;
+        margin: 5px 0%;
+        float: left;
+        padding: 0;
+    }
+    .count-title {
+        padding: 16px 0 13px 10px;
+    }
+    .count {
+        float: left;
+        padding: 7px 0 6px 6px;
+    }
+    .order {
+        height: 30px;
+        padding: 10px 10px 10px 0;
+    }
+}
+@media (max-width: 360px) {
+    .add-anime input[type="text"][name="name"] {
+        width: calc(100% - 137px);
+    }
+    .add-anime input[type="text"][name="number"] {
+        width: 40px;
+    }
+}
